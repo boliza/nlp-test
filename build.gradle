@@ -9,16 +9,18 @@ version = '1.0.0-SNAPSHOT'
 
 apply plugin: 'java'
 apply plugin: 'idea'
+apply plugin: 'application'
+
+mainClassName='edu.stanford.nlp.pipeline.StanfordCoreNLPServer'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-  compile "io.vertx:vertx-core:3.4.1"
-  compile "com.hankcs:hanlp:portable-1.2.8"
   compile "edu.stanford.nlp:stanford-corenlp:3.8.0"
   compile "edu.stanford.nlp:stanford-parser:3.7.0"
   compile "edu.stanford.nlp:stanford-corenlp:3.8.0:models-chinese"
+  compile "edu.stanford.nlp:stanford-corenlp:3.8.0:models"
 }
 
 task wrapper(type: Wrapper) {
